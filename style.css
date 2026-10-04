@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+body {
+  background: radial-gradient(circle at 50% 0%, #1e1145 0%, #0b0f19 70%);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #f3f4f6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass-card {
+  background: rgba(17, 24, 39, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.glow-purple {
+  position: relative;
+  box-shadow: 0 0 35px rgba(147, 51, 234, 0.2);
+}
+
+.glow-purple::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.1), transparent);
+  border-radius: 1.6rem;
+  z-index: -1;
+  pointer-events: none;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  background: rgba(10, 15, 29, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #a855f7 !important;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+  outline: none;
+}
+
+button {
+  transition: all 0.25s ease-in-out !important;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(11, 15, 25, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.4);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.7);
+}
